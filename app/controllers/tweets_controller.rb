@@ -19,10 +19,15 @@ class TweetsController < ApplicationController
     end
   end
 
+  def edit
+    @tweet = Tweet.find(params[:id])
+    
+  end
+
   def destroy
-    @tweet = Tweet.find(params[:tweet])
+    @tweet = Tweet.find(params[:id])
     @tweet.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: '削除しました'
   end
 
   private
