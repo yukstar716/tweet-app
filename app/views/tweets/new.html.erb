@@ -8,6 +8,9 @@
         <%= image_tag current_user.profile_photo, class: "avatar avatar-size32" %>
         <%= f.text_area :text, placeholder: "いまどうしてる？", class: "form-control", rows: "3" %>
       </div>
+      <div class="tag">
+        <%= f.text_field :tag_list, value: @tweet.tag_list.join(','), class: "form-control", placeholder: "タグを追加しよう" %>
+      </div>
       <div class="buttons">
         <%= f.submit "ツイート", class: "btn btn-primary tweet-btn" %>
       </div>

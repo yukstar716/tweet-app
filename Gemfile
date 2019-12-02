@@ -64,6 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'devise'
+gem  'acts-as-taggable-on', '~> 6.0'
 #gem 'nokogiri', '>= 1.10.4'
 #gem 'rubyzip', '>= 1.3.0'
 #gem "loofah", ">= 2.3.1"
