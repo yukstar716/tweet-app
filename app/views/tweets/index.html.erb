@@ -15,8 +15,11 @@
           <div class="tweet-text">
             <%= safe_join(tweet.text.split("\n"), tag(:br)) %>
           </div>
+          <div class="picture">
+            <%= image_tag tweet.picture_url if tweet.picture.present? %>
+          </div>
           <div class="tag">
-            <%= tweet.tag_list %>
+            <span class="badge badge-primary"><%= tweet.tag_list %></span>
           </div>
           <div class="text-right pb-1">
             <button type="button", class="btn btn-outline-secondary">

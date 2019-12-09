@@ -21,7 +21,17 @@ class TweetsController < ApplicationController
 
   def edit
     @tweet = Tweet.find(params[:id])
-    
+  end
+
+  def update
+    @tweet = Tweet.find(params[:id])
+    if @tweet.update(tweet_params)
+      redirect_to root_path
+      flash[:notice] = "編集内容を保存しました。"
+    else
+      render :edit
+      flash[:alert] = "保存が失敗しました。"
+    end
   end
 
   def destroy
@@ -32,6 +42,6 @@ class TweetsController < ApplicationController
 
   private
     def tweet_params
-      params.require(:tweet).permit(:text, :description, :tag_list).merge(user_id: current_user.id)
+      params.require(:tweet).permit(:text, :description, :tag_lis, :picture).merge(user_id: current_user.id)
     end
 end
