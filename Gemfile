@@ -66,6 +66,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem  'acts-as-taggable-on', '~> 6.0'
 gem 'carrierwave'
+gem 'mini_magick'
+#gem 'rb-readline'
 #gem 'nokogiri', '>= 1.10.4'
 #gem 'rubyzip', '>= 1.3.0'
 #gem "loofah", ">= 2.3.1"
