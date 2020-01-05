@@ -19,7 +19,9 @@
             <%= image_tag tweet.picture_url if tweet.picture.present? %>
           </div>
           <div class="tag">
-            <span class="badge badge-primary"><%= tweet.tag_list %></span>
+            <% tweet.tag_list.each do |tag| %>
+              <a href="#" class="badge badge-primary"><%= tag %></a>
+            <% end %>
           </div>
           <div class="text-right pb-1">
             <button type="button", class="btn btn-outline-secondary">

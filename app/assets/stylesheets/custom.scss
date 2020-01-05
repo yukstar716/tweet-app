@@ -257,6 +257,23 @@ ul {
         font-size: 14px;
         line-height: 20px;
       }
+      .picture {
+        text-align: center;
+        //width: 500px;
+        //height: 200px;
+        //object-fit: cover;
+        margin-top: 20px;
+        //margin-left: 0rem;
+        border-radius: 10px;
+        //padding: 20px;
+        background: #8E9BA7;
+      }
+      .tag {
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 52px;
+        font-size: 18px;
+      }
     }
   }
 }
